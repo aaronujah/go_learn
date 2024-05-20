@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1092679720175",
+    "project_id": "golearn-c401b",
+    "storage_bucket": "golearn-c401b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092679720175:android:bf3f38eefa735f81e40f1a",
+        "android_client_info": {
+          "package_name": "com.example.go_learn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUEYFm6TdfQh4PMHiKmhHEt9aRxyD2u5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

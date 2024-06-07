@@ -3,10 +3,10 @@ import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_learn/app_blocs.dart';
+import 'package:go_learn/common/values/colors.dart';
 import 'package:go_learn/pages/bloc_providers.dart';
+import 'package:go_learn/pages/register/register.dart';
 import 'package:go_learn/pages/sign_in/sign_in.dart';
-import 'package:go_learn/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:go_learn/pages/welcome/welcome.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -30,11 +30,14 @@ class MyApp extends StatelessWidget {
                 debugShowCheckedModeBanner: false,
                 theme: ThemeData(
                     appBarTheme: const AppBarTheme(
-                        elevation: 0, backgroundColor: Colors.white)),
+                        iconTheme: IconThemeData(color: AppColors.primaryText),
+                        elevation: 0,
+                        backgroundColor: Colors.white)),
                 home: const Welcome(),
                 routes: {
                   "signIn": (context) => const SignIn(),
-                  "myHomePage": (context) => const MyHomePage()
+                  "myHomePage": (context) => const MyHomePage(),
+                  "register": (context) => const Register()
                 },
               )),
     );

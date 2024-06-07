@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_learn/common/values/colors.dart';
-import 'package:go_learn/main.dart';
 import 'package:go_learn/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:go_learn/pages/welcome/bloc/welcome_events.dart';
 import 'package:go_learn/pages/welcome/bloc/welcome_states.dart';

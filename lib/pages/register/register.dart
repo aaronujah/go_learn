@@ -5,6 +5,7 @@ import 'package:go_learn/pages/common_widgets.dart';
 import 'package:go_learn/pages/register/bloc/register_blocs.dart';
 import 'package:go_learn/pages/register/bloc/register_events.dart';
 import 'package:go_learn/pages/register/bloc/register_states.dart';
+import 'package:go_learn/pages/register/register_controller.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -76,7 +77,7 @@ class _RegisterState extends State<Register> {
                         "By creating an account, you agree with our terms & conditions"),
                   ),
                   buildLogInAndRegButton("Sign Up", "login", () {
-                    Navigator.of(context).pushNamed("register");
+                    RegisterController(context: context).handleEmailRegister();
                   })
                 ],
               )),

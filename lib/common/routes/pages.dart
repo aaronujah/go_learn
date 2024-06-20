@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_learn/common/routes/routes.dart';
+import 'package:go_learn/pages/application/application_page.dart';
+import 'package:go_learn/pages/application/bloc/app_blocs.dart';
 import 'package:go_learn/pages/register/bloc/register_blocs.dart';
 import 'package:go_learn/pages/register/register.dart';
 import 'package:go_learn/pages/sign_in/bloc/sign_in_blocs.dart';
@@ -31,12 +33,11 @@ class AppPages {
             create: (_) => RegisterBlocs(),
           )),
       PageEntity(
-        route: AppRoutes.APPLICATION,
-        page: const Welcome(),
-        // bloc: BlocProvider(
-        //   create: (_) => WelcomeBloc(),
-        // )
-      )
+          route: AppRoutes.APPLICATION,
+          page: const ApplicationPage(),
+          bloc: BlocProvider(
+            create: (_) => AppBlocs(),
+          ))
     ];
   }
 

@@ -4,14 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_learn/common/values/colors.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:go_learn/global.dart';
 
 import 'common/routes/pages.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  await Firebase.initializeApp();
+  await Global.init();
   runApp(const MyApp());
 }
 

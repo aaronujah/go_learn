@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_learn/common/routes/routes.dart';
+import 'package:go_learn/global.dart';
 import 'package:go_learn/pages/application/application_page.dart';
 import 'package:go_learn/pages/application/bloc/app_blocs.dart';
 import 'package:go_learn/pages/register/bloc/register_blocs.dart';
@@ -56,6 +57,18 @@ class AppPages {
     if (settings.name != null) {
       var result = routes().where((element) => element.route == settings.name);
       if (result.isNotEmpty) {
+        bool deviceFirstOpen = Global.storageService.getDeviceFirstOpen();
+        if (result.first.route == AppRoutes.INITIAL && deviceFirstOpen) {
+          bool isLoggedIn = Global.storageService.getIsLoggedIn();
+          if (isLoggedIn) {
+            return MaterialPageRoute(
+                builder: (_) => const ApplicationPage(), settings: settings);
+          }
+
+          return MaterialPageRoute(
+              builder: (_) => const SignIn(), settings: settings);
+        }
+
         return MaterialPageRoute(
             builder: (_) => result.first.page, settings: settings);
       }

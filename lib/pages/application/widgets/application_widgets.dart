@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_learn/common/values/colors.dart';
+import 'package:go_learn/pages/home/home_page.dart';
 
 Widget buildPage(int index) {
   List<Widget> _widget = [
-    Center(
-      child: Text("Home"),
-    ),
+    const HomePage(),
     Center(
       child: Text("Search"),
     ),

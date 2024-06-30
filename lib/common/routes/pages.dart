@@ -5,6 +5,8 @@ import 'package:go_learn/common/routes/routes.dart';
 import 'package:go_learn/global.dart';
 import 'package:go_learn/pages/application/application_page.dart';
 import 'package:go_learn/pages/application/bloc/app_blocs.dart';
+import 'package:go_learn/pages/home/bloc/home_page_blocs.dart';
+import 'package:go_learn/pages/home/home_page.dart';
 import 'package:go_learn/pages/register/bloc/register_blocs.dart';
 import 'package:go_learn/pages/register/register.dart';
 import 'package:go_learn/pages/sign_in/bloc/sign_in_blocs.dart';
@@ -38,6 +40,12 @@ class AppPages {
           page: const ApplicationPage(),
           bloc: BlocProvider(
             create: (_) => AppBlocs(),
+          )),
+      PageEntity(
+          route: AppRoutes.HOME_PAGE,
+          page: const HomePage(),
+          bloc: BlocProvider(
+            create: (_) => HomePageBlocs(),
           ))
     ];
   }
